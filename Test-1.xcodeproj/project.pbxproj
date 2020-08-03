@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		195F368D24D7D25500C3CFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F368C24D7D25500C3CFCF /* AppDelegate.swift */; };
-		195F368F24D7D25500C3CFCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F368E24D7D25500C3CFCF /* SceneDelegate.swift */; };
 		195F369124D7D25500C3CFCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F369024D7D25500C3CFCF /* ViewController.swift */; };
 		195F369424D7D25500C3CFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195F369224D7D25500C3CFCF /* Main.storyboard */; };
 		195F369624D7D25C00C3CFCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195F369524D7D25C00C3CFCF /* Assets.xcassets */; };
 		195F369924D7D25C00C3CFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195F369724D7D25C00C3CFCF /* LaunchScreen.storyboard */; };
+		195F36A124D7D99200C3CFCF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F36A024D7D99200C3CFCF /* ViewModel.swift */; };
+		195F36A324D7E9B900C3CFCF /* AlertBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F36A224D7E9B900C3CFCF /* AlertBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		195F368924D7D25500C3CFCF /* Test-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		195F368C24D7D25500C3CFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		195F368E24D7D25500C3CFCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		195F369024D7D25500C3CFCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		195F369324D7D25500C3CFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		195F369524D7D25C00C3CFCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		195F369824D7D25C00C3CFCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		195F369A24D7D25C00C3CFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195F36A024D7D99200C3CFCF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		195F36A224D7E9B900C3CFCF /* AlertBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				195F368C24D7D25500C3CFCF /* AppDelegate.swift */,
-				195F368E24D7D25500C3CFCF /* SceneDelegate.swift */,
 				195F369024D7D25500C3CFCF /* ViewController.swift */,
 				195F369224D7D25500C3CFCF /* Main.storyboard */,
 				195F369524D7D25C00C3CFCF /* Assets.xcassets */,
 				195F369724D7D25C00C3CFCF /* LaunchScreen.storyboard */,
 				195F369A24D7D25C00C3CFCF /* Info.plist */,
+				195F36A024D7D99200C3CFCF /* ViewModel.swift */,
+				195F36A224D7E9B900C3CFCF /* AlertBox.swift */,
 			);
 			path = "Test-1";
 			sourceTree = "<group>";
@@ -140,7 +143,8 @@
 			files = (
 				195F369124D7D25500C3CFCF /* ViewController.swift in Sources */,
 				195F368D24D7D25500C3CFCF /* AppDelegate.swift in Sources */,
-				195F368F24D7D25500C3CFCF /* SceneDelegate.swift in Sources */,
+				195F36A324D7E9B900C3CFCF /* AlertBox.swift in Sources */,
+				195F36A124D7D99200C3CFCF /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U8ABLMRK4;
 				INFOPLIST_FILE = "Test-1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U8ABLMRK4;
 				INFOPLIST_FILE = "Test-1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
