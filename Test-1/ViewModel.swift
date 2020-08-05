@@ -9,12 +9,16 @@
 import Foundation
 import UIKit
 
-
 class ViewModel{
+
+
     
-    func showLoading(){
-     //   LoadingView.show()
+    func sendData(completion:() -> Void){
+        completion()
     }
     
+    
+    static var sharedInstance = ViewModel()
+    var myViewController:UIViewController?
     
 }

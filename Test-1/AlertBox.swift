@@ -51,6 +51,8 @@ class AlertBox:UIView{
     
     
     func addButtons(text:String, completion:@escaping () -> Void){
+        
+        
         let view = Button()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -82,6 +84,7 @@ class AlertBox:UIView{
     
     
 }
+
 
 class Button:UIButton{
     

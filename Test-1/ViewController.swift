@@ -6,35 +6,81 @@
 //  Copyright © 2020 Hassan Abbasi. All rights reserved.
 //
 
+
+
+class MyCustomObject{
+    
+}
+
+
+class Theme{
+    static func font(size:CGFloat) -> UIFont{
+        UIFont.systemFont(ofSize: size)
+    }
+
+
+
+    static var color = #colorLiteral(red: 0.8078431373, green: 0.02745098039, blue: 0.3333333333, alpha: 1)
+
+    enum FontSizes:CGFloat{
+        case small = 12
+        case large = 14
+        
+    }
+    
+    
+}
+
+
+
+
+
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+    
+    enum UserType:String{
+        case  Teacher = "I am a teacher"
+        case  Student = "I am a Student"
+    }
 
-    static var font:UIFont = UIFont.systemFont(ofSize: 12)
+    
+    var isUserType:UserType = .Teacher
+    
+
+    fileprivate var randomView:UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = Theme.color
+        Theme.font(size: Theme.FontSizes.large.rawValue)
+        return v
+    }()
+    
+
     
     
      override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        var customObject1 = MyCustomObject()
+        var customObject2 = MyCustomObject()
+        
+        view.addSubview(randomView)
         
         
-       //  myName = "Hassan"
-        
-        let alertBox = AlertBox()
-        alertBox.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(alertBox)
-        
-        alertBox.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        alertBox.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        alertBox.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        alertBox.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        alertBox.addButtons(text:"Okay",completion: {
-            print("Hello there")
+        NSLayoutConstraint.activate( [
+        randomView.heightAnchor.constraint(equalToConstant: 100),
+        randomView.widthAnchor.constraint(equalToConstant: 100),
+        randomView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        randomView.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
+        isUserType = .Student
+        print(isUserType.rawValue)
             
             
-        })
      }
+    
+    
+    
     
     
     
@@ -56,6 +102,11 @@ class ViewController: UIViewController {
 
     }
 
+}
+
+
+class MyButton:UIView{
+    
 }
 
 
