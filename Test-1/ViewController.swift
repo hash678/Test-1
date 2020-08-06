@@ -37,7 +37,12 @@ class Theme{
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: BaseViewController{
+    
+    
+    
+    
+    var myData:String?
     
     enum UserType:String{
         case  Teacher = "I am a teacher"
@@ -48,8 +53,8 @@ class ViewController: UIViewController{
     var isUserType:UserType = .Teacher
     
 
-    fileprivate var randomView:UIView = {
-        let v = UIView()
+    fileprivate var randomView:UIImageView = {
+        let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = Theme.color
         Theme.font(size: Theme.FontSizes.large.rawValue)
@@ -61,7 +66,6 @@ class ViewController: UIViewController{
     
      override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
         var customObject1 = MyCustomObject()
         var customObject2 = MyCustomObject()
         
@@ -75,7 +79,34 @@ class ViewController: UIViewController{
         randomView.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
         isUserType = .Student
         print(isUserType.rawValue)
+        
+        
+        NetworkingService.shared.loadImageWithResult(withURL: "https://miro.medium.com/max/700/1*o8tTGo3vsocTKnCUyz0wHA.jpeg") { (result) in
             
+            
+            switch result{
+            case .success(let data):
+                print(data)
+                self.randomView.image = UIImage(data: data)
+            case .failure(let error):
+                self.showError()
+                print(error)
+            }
+            
+            
+            
+        }
+        
+        
+        
+//        NetworkingService.shared.loadMyImage(withURL: "https://miro.medium.com/max/700/1*o8tTGo3vsocTKnCUyz0wHA.jpeg") { (str, error)  in
+//
+//            if error != nil{
+//
+//
+//            }
+//            self.myData = str
+//        }
             
      }
     
