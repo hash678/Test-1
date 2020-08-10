@@ -30,7 +30,7 @@ class NetworkingService{
 
                     //200
                     //404
-                    //403 internal error
+                    //500 internal error
                     //526 SSL
                 if let error = error{
                     completion(.failure(error))

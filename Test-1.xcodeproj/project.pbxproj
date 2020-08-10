@@ -17,6 +17,10 @@
 		195F369924D7D25C00C3CFCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195F369724D7D25C00C3CFCF /* LaunchScreen.storyboard */; };
 		195F36A124D7D99200C3CFCF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F36A024D7D99200C3CFCF /* ViewModel.swift */; };
 		195F36A324D7E9B900C3CFCF /* AlertBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F36A224D7E9B900C3CFCF /* AlertBox.swift */; };
+		1962E4DB24E1509A00C675E1 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1962E4DA24E1509A00C675E1 /* MyCustomView.swift */; };
+		1962E4DD24E159B400C675E1 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1962E4DC24E159B400C675E1 /* PersonModel.swift */; };
+		1962E4E024E159CC00C675E1 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1962E4DF24E159CC00C675E1 /* PersonView.swift */; };
+		1962E4E224E159D600C675E1 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1962E4E124E159D600C675E1 /* PersonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		195F369A24D7D25C00C3CFCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		195F36A024D7D99200C3CFCF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		195F36A224D7E9B900C3CFCF /* AlertBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBox.swift; sourceTree = "<group>"; };
+		1962E4DA24E1509A00C675E1 /* MyCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
+		1962E4DC24E159B400C675E1 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		1962E4DF24E159CC00C675E1 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		1962E4E124E159D600C675E1 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +83,20 @@
 				1930564524D968AE007098BF /* SecondViewController.swift */,
 				1930565124DAB992007098BF /* NetworkingService.swift */,
 				1930565724DC0748007098BF /* BaseViewController.swift */,
+				1962E4DA24E1509A00C675E1 /* MyCustomView.swift */,
+				1962E4DE24E159BC00C675E1 /* MVVM */,
 			);
 			path = "Test-1";
+			sourceTree = "<group>";
+		};
+		1962E4DE24E159BC00C675E1 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				1962E4DC24E159B400C675E1 /* PersonModel.swift */,
+				1962E4DF24E159CC00C675E1 /* PersonView.swift */,
+				1962E4E124E159D600C675E1 /* PersonViewModel.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				195F369124D7D25500C3CFCF /* ViewController.swift in Sources */,
+				1962E4DB24E1509A00C675E1 /* MyCustomView.swift in Sources */,
 				195F368D24D7D25500C3CFCF /* AppDelegate.swift in Sources */,
+				1962E4E224E159D600C675E1 /* PersonViewModel.swift in Sources */,
 				195F36A324D7E9B900C3CFCF /* AlertBox.swift in Sources */,
 				1930565224DAB992007098BF /* NetworkingService.swift in Sources */,
+				1962E4E024E159CC00C675E1 /* PersonView.swift in Sources */,
 				1930564624D968AE007098BF /* SecondViewController.swift in Sources */,
+				1962E4DD24E159B400C675E1 /* PersonModel.swift in Sources */,
 				1930565824DC0748007098BF /* BaseViewController.swift in Sources */,
 				195F36A124D7D99200C3CFCF /* ViewModel.swift in Sources */,
 			);
