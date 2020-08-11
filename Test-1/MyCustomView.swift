@@ -22,6 +22,7 @@ class MyGenericObject<MyType>:UIView{
         self.item = item
         self.myNameLabel.text = howToSetValue(item)
 
+      
     }
     
     

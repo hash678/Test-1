@@ -10,6 +10,9 @@
 		1930564624D968AE007098BF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930564524D968AE007098BF /* SecondViewController.swift */; };
 		1930565224DAB992007098BF /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930565124DAB992007098BF /* NetworkingService.swift */; };
 		1930565824DC0748007098BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930565724DC0748007098BF /* BaseViewController.swift */; };
+		1934AA2824E2A839004C4A01 /* MyTutorCollectionVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934AA2724E2A839004C4A01 /* MyTutorCollectionVIewCell.swift */; };
+		1934AA2A24E2A865004C4A01 /* TableViewSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934AA2924E2A865004C4A01 /* TableViewSectionCell.swift */; };
+		1934AA2C24E2A88B004C4A01 /* MyHomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934AA2B24E2A88B004C4A01 /* MyHomeScreenView.swift */; };
 		195F368D24D7D25500C3CFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F368C24D7D25500C3CFCF /* AppDelegate.swift */; };
 		195F369124D7D25500C3CFCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F369024D7D25500C3CFCF /* ViewController.swift */; };
 		195F369424D7D25500C3CFCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195F369224D7D25500C3CFCF /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 		1930564524D968AE007098BF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1930565124DAB992007098BF /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		1930565724DC0748007098BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1934AA2724E2A839004C4A01 /* MyTutorCollectionVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTutorCollectionVIewCell.swift; sourceTree = "<group>"; };
+		1934AA2924E2A865004C4A01 /* TableViewSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionCell.swift; sourceTree = "<group>"; };
+		1934AA2B24E2A88B004C4A01 /* MyHomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeScreenView.swift; sourceTree = "<group>"; };
 		195F368924D7D25500C3CFCF /* Test-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		195F368C24D7D25500C3CFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		195F369024D7D25500C3CFCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1934AA2D24E2A89D004C4A01 /* Generic Sections Example */ = {
+			isa = PBXGroup;
+			children = (
+				1934AA2B24E2A88B004C4A01 /* MyHomeScreenView.swift */,
+				1934AA2924E2A865004C4A01 /* TableViewSectionCell.swift */,
+				1934AA2724E2A839004C4A01 /* MyTutorCollectionVIewCell.swift */,
+			);
+			path = "Generic Sections Example";
+			sourceTree = "<group>";
+		};
 		195F368024D7D25500C3CFCF = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +100,7 @@
 				1930565124DAB992007098BF /* NetworkingService.swift */,
 				1930565724DC0748007098BF /* BaseViewController.swift */,
 				1962E4DA24E1509A00C675E1 /* MyCustomView.swift */,
+				1934AA2D24E2A89D004C4A01 /* Generic Sections Example */,
 				1962E4DE24E159BC00C675E1 /* MVVM */,
 			);
 			path = "Test-1";
@@ -172,6 +189,8 @@
 			files = (
 				195F369124D7D25500C3CFCF /* ViewController.swift in Sources */,
 				1962E4DB24E1509A00C675E1 /* MyCustomView.swift in Sources */,
+				1934AA2A24E2A865004C4A01 /* TableViewSectionCell.swift in Sources */,
+				1934AA2C24E2A88B004C4A01 /* MyHomeScreenView.swift in Sources */,
 				195F368D24D7D25500C3CFCF /* AppDelegate.swift in Sources */,
 				1962E4E224E159D600C675E1 /* PersonViewModel.swift in Sources */,
 				195F36A324D7E9B900C3CFCF /* AlertBox.swift in Sources */,
@@ -179,6 +198,7 @@
 				1962E4E024E159CC00C675E1 /* PersonView.swift in Sources */,
 				1930564624D968AE007098BF /* SecondViewController.swift in Sources */,
 				1962E4DD24E159B400C675E1 /* PersonModel.swift in Sources */,
+				1934AA2824E2A839004C4A01 /* MyTutorCollectionVIewCell.swift in Sources */,
 				1930565824DC0748007098BF /* BaseViewController.swift in Sources */,
 				195F36A124D7D99200C3CFCF /* ViewModel.swift in Sources */,
 			);
