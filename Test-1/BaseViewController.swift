@@ -21,7 +21,7 @@ class BaseViewController:UIViewController{
         
         let myView = PersonView<PersonViewModel>(frame: .zero, viewModel: PersonViewModel(person: Person(name: "Name", gender: .Male, ethincity: "", isLoggedIn: true))) { (person, view) in
             view.nameLabel.text = person.name
-            view.icon.image = person.loginImage
+            view.icon.image = person.image
         }
         
         

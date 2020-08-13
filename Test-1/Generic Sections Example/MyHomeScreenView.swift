@@ -18,11 +18,13 @@ class MyHomeScreenView:UIView, UITableViewDataSource,UITableViewDelegate{
     
     
     
+    
+    
     //TableView : This holds all the sections
 
      lazy var tableView:UITableView = {
          let tableView = UITableView()
-         tableView.register(TableViewSectionCell<MyTutorCollectionVIewCell,Person>.self, forCellReuseIdentifier: "personSection")
+         tableView.register(TableViewSectionCell<MyTutorCollectionVIewCell,MyTutorCollectionVIewDataProtcol>.self, forCellReuseIdentifier: "personSection")
 
          return tableView
      }()
@@ -41,11 +43,13 @@ class MyHomeScreenView:UIView, UITableViewDataSource,UITableViewDelegate{
         
         if indexPath.row == 0{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personSection") as! TableViewSectionCell<MyTutorCollectionVIewCell,Person>
-        cell.setupCell = {(cell,viewModel) in
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personSection") as! TableViewSectionCell<MyTutorCollectionVIewCell,MyTutorCollectionVIewDataProtcol>
+      
+            cell.setupCell = {(cell,viewModel) in
+                
+               // cell.name.text = viewModel.name
+            cell.setDataForCell(withModel: viewModel)
             
-            cell.setupCell(model: viewModel)
-            return cell
         }
         return cell
     }
@@ -55,5 +59,22 @@ class MyHomeScreenView:UIView, UITableViewDataSource,UITableViewDelegate{
     }
  
     
+    
+    
+  
 }
 
+
+
+
+
+/***
+ TableView: -> ViewController, UiTableViewController
+ Tableview contains cells, each cell there is a horizontal list (i.e a collectionview).
+ Each horizontal list will have differernt views and different type of data
+ 
+ TableViewCell: UiCollectionView<CollectionViewItem, DataType(ViewModel)> Embedded in the cell.
+ 
+ 
+ 
+ */

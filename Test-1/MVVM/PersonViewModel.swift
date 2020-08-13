@@ -9,24 +9,17 @@
 import Foundation
 import UIKit
 
-class PersonViewModel{
+class PersonViewModel:MyTutorCollectionVIewDataProtcol{
+    var image: UIImage
+    
     
     var name:String
-    var loginImage:UIImage?
     
     init(person:Person){
         name = person.name
-        loginImage = person.isLoggedIn ?  UIImage(named:"LoggedIN") :   UIImage(named:"NotLoggedIN")
+        image = person.isLoggedIn ?  UIImage(named:"LoggedIN")! :   UIImage(named:"NotLoggedIN")!
 
 
-//        if person.isLoggedIn{
-//            icon.image = UIImage(named:"LoggedIN")
-//
-//        }
-//        else{
-//            icon.image = UIImage(named:"NotLoggedIN")
-//
-//        }
     }
     
 }

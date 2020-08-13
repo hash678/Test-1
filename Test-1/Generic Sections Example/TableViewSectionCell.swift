@@ -15,7 +15,9 @@ class TableViewSectionCell<MyOwnCell:UICollectionViewCell, ViewModel>:UITableVie
 UICollectionViewDelegate,UICollectionViewDataSource
 {
     
-    
+    //Function to map each item in the horizontal list
+    var setupCell:( (MyOwnCell,ViewModel) -> Void)?
+
     
     //Items of the horizontal list
     var datasource = [ViewModel]()
@@ -30,19 +32,18 @@ UICollectionViewDelegate,UICollectionViewDataSource
         return c
     }()
     
-    //Function to map each item in the horizontal list
-    var setupCell:( (MyOwnCell,ViewModel) -> MyOwnCell)?
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return datasource.count
+        return 5
     }
     
     
   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath) as! MyOwnCell
-        return setupCell?(cell,datasource[indexPath.row]) ?? cell
+        setupCell?(cell,datasource[indexPath.row])
+        return  cell
        
     }
     
